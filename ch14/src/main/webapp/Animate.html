@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.box{
+width: 100px; height: 100px;
+background-color: red;
+position: absolute;
+left:30px; top: 30px;
+}
+</style>
+<script type="text/javascript" 
+   src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+$().ready(function(){
+	$('.box').click(function(){
+		$(this).animate({left:700},2000);
+	});
+});
+</script>
+</head>
+<body>
+<div class="box"></div>
+</body>
+</html>

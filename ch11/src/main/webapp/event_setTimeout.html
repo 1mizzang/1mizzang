@@ -1,0 +1,31 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<title>event setTimeout</title>
+</head>
+<body>
+<script>
+var stopped=false;
+
+function start(){
+ dom = document.getElementById("sec");
+ dom.value = parseInt(dom.value) + 1;/* "10"+1 => 10 +1 => 11  */
+ if(!stopped) {
+	 /* setTimeout(함수,딜레이시간ms) */
+	 setTimeout(start,1000);/* 1초 후에 자신(start())을 다시 부르도록 처리 */
+ }
+}
+</script>
+
+<h2>Stopwatch</h2>
+<form action="">
+  <input type="button" value="start" 
+        onclick="stopped=false; setTimeout(start,1000);">
+  <input type="button" value="stop" 
+        onclick="stopped=true;">
+  <input type="reset"><br><br>
+  
+  <input id="sec" value="0" size="2">seconds      
+</form>
+
+</body>
+</html>

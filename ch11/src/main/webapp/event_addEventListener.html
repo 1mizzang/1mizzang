@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>addEventListener</title>
+</head>
+<body>
+<form>
+  <input id="username" value="Name of User">
+</form>
+<script>
+ function myEventHandler(){
+	 alert("Please type your full name");
+ }
+ 
+ var dom = document.getElementById("username");
+ /* addEventListener(이벤트,함수명); */
+ dom.addEventListener("click",myEventHandler);// myEventHandler()로 하면 오류남. ()없이 사용.
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html><html>
+<head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.2.js"></script>
+<script>
+/* 웹 페이지를 모두 불러왔을 때 */
+$(document).ready(function(){
+	/* 'h1' 태그에 click이벤트에 대한 처리 연결 on('click',콜백함수) */
+	$('h1').on('click',function(event){
+		const text = $(this).text();
+		alert(text);
+	});
+});
+</script>
+
+</head>
+<body>
+<h1>Header_1</h1>
+<h1>Header_2</h1>
+</body>
+</html>

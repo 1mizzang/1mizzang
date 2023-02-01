@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Javascript Object Notation</title>
+</head>
+<body>
+<script>
+/* 변수명 ={속성명:속성값} */
+var book={title:"멀티미디어 배움터 2.0", /* {속성명:속성값} */
+		  publisher:"생능출판사",
+		  author:"최윤철, 임순범",
+		  price:25000,
+		  pages:442,
+		  display:function(){
+			   document.write("title:"+book.title+"<br>");
+			   document.write("publisher:"+book.publisher+"<br>");
+			   document.write("author:"+book.author+"<br>");
+			   document.write("price:"+book.price+"<br>");
+			   document.write("pages:"+book.pages+"<br>");   
+				   }
+		  /* {title:"멀티미디어 배움터 2.0",
+							   publisher:"생능출판사",
+							   author:"최윤철, 임순범",
+							   price=25000
+							   }*/
+}
+
+console.log(book);
+console.log(book.title);
+document.write(book.display());
+</script>
+
+</body>
+</html>

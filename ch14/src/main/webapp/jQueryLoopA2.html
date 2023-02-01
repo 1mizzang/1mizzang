@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Event</title>
+<!-- jQuery라이브러리 연결하기 -->
+<script src="./js/jquery-3.6.3.min.js"></script>
+<!-- jQuery라이브러리를 이용한 DOM객체 핸들링 -->
+<script>
+/* 웹 페이지를 모두 불러왔을때 처리하는 코드  */
+$(document).ready(function (){
+	//h1인 태그 모두 추출
+	const $headers =$('h1'); // document.getElementsByTagName('h1');
+	console.log($headers.length);
+	
+	//h1 태그 갯수만큼 반복처리
+	for(let i=0;i<$headers.length;i++){
+	  if(i%2==1){
+		const domElement = $headers.get(i);
+		$(domElement).css('background','red');//css 스타일 처리 css(스타일속성,값);
+	  }
+	}
+});
+</script>
+</head>
+<body>
+<h1>HeaderA</h1>
+<h1>HeaderB</h1>
+<h1>HeaderC</h1>
+<h1>HeaderD</h1>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>getAttribute/setAttribute</title>
+</head>
+<body>
+<a  id="link" href="http://www.google.co.kr">링크</a>
+<br><br>
+<input type="text" id="text"><button id="btn">href속성바꾸기</button>
+<br><br>
+<p id="curr_href"></p>
+
+
+<script>
+/* 함수 선언 */
+ function changehref(){
+	 new_href="https://" +document.getElementById("text").value;
+	 document.getElementById("link").innerText=new_href;
+	 document.getElementById("link").setAttribute("href",new_href);/* 속성변경 setAttribute(속성명,값) */
+	 console.log(document.getElementById("link").innerText);
+ }
+ /* onclick 이벤트 리스너 에 함수를 지정 */
+ document.getElementById("btn").onclick=changehref;
+ /* p태그에 내용 출력 */
+ document.getElementById("curr_href").innerText
+                 ="기존 href =" +document.getElementById("link").getAttribute("href"); /* 속성값출력 getAttribute(속성명)  */
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" 
+   src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('body').on('click','h1',function(event){
+		$('<h1></h1>').text($(this).text()).appendTo('body');
+	});
+});
+</script>   
+</head>
+<body>
+<h1>Header</h1>
+</body>
+</html>

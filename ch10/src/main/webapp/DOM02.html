@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>getElementsByTagName</title>
+</head>
+<body>
+<p>&lt;p&gt; 첫 번째 태그</p>
+<p>&lt;p&gt; 두 번째 태그</p>
+<p class="myclass">myclass</p>
+<p class="myclass">myclass</p>
+<input type="button" value="내용바꾸기" onclick="changecontent()" >
+
+<script>
+ function changecontent(){
+	 p_elements = document.getElementsByTagName("p");/* 태그명이 "p"인 요소 3개 얻기 =>배열로 얻음 */
+	 alert(p_elements.length);
+	 alert(p_elements[1].innerText);/* 위에서 얻어진 p요소중의 두번째 요소의 text내용 출력 */
+	 p_elements[1].innerText="<p> 두 번째 요소 내용 바꾸기";
+	 
+	 myclass_elements = document.getElementsByClassName("myclass");/* 배열형태로 얻음 */
+	 alert(myclass_elements.length);
+	 /* text내용바꾸기 */
+	 myclass_elements[0].innerText="<b>myclass 내용 바꾸기<b>";/* text */
+	 /* HTML내용바꾸기 */
+	 myclass_elements[1].innerHTML="<b>myclass 내용 바꾸기<b>";/* html변경 */
+	 
+ }
+</script>
+
+</body>
+</html>

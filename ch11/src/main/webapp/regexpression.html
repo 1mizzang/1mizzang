@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+const p = '1The quick brown fox jumps over the lazy dog. 1If the dog reacted, 2was it really lazy?';
+
+console.log(p.replace('dog', 'monkey'));
+// Expected output: "The quick brown fox jumps over the lazy monkey. If the dog reacted, was it really lazy?"
+
+const regex = /dog/g;
+console.log(p.replace(regex, 'ferret'));
+// Expected output: "The quick brown fox jumps over the lazy ferret. If the dog reacted, was it really lazy?"
+
+var str="27,000원"		
+regex1 = /[^0-9]/g;
+var result=str.replace(regex1,"");
+console.log("결과:",result);
+
+</script>
+</body>
+</html>

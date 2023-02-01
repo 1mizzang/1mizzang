@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사용자 정의 객체</title>
+</head>
+<body>
+<script type="text/javascript">
+ /* var 변수명 = new Object();로 생성하기 */
+var book=new Object();// book이라는 이름을 가진 빈 객체 생성(속성이 하나도 없는 비어있는 객체) {}
+book.title = "멀티미디어 배움터 2.0";  /* {title:"멀티미디어 배움터 2.0"} */ /* {속성명:속성값} */
+book.publisher="생능출판사"; /* {title:"멀티미디어 배움터 2.0",
+	                           publisher:"생능출판사"} */
+book.author ="최윤철, 임순범"; /* {title:"멀티미디어 배움터 2.0",
+                                publisher:"생능출판사",
+                                author:"최윤철, 임순범"} */
+book.price =25000; /* {title:"멀티미디어 배움터 2.0",
+					   publisher:"생능출판사",
+					   author:"최윤철, 임순범",
+					   price=25000
+					   }*/
+book.pages =442; /* {title:"멀티미디어 배움터 2.0",
+					   publisher:"생능출판사",
+					   author:"최윤철, 임순범",
+					   price=25000,
+					   pages=442
+					   }  */
+					   
+console.log(book);
+/* 객체의 속성 접근은 "변수명.속성명"으로 접근  */
+console.log(book.title);					   
+</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사용자 정의 객체</title>
+</head>
+<body>
+<script type="text/javascript">
+ /* var 변수명 = new Object();로 생성하기 */
+var book=new Object();// book이라는 이름을 가진 빈 객체 생성(속성이 하나도 없는 비어있는 객체) {}
+book.title = "멀티미디어 배움터 2.0";  /* {title:"멀티미디어 배움터 2.0"} */ /* {속성명:속성값} */
+book.publisher="생능출판사"; /* {title:"멀티미디어 배움터 2.0",
+	                           publisher:"생능출판사"} */
+book.author ="최윤철, 임순범"; /* {title:"멀티미디어 배움터 2.0",
+                                publisher:"생능출판사",
+                                author:"최윤철, 임순범"} */
+book.price =25000; /* {title:"멀티미디어 배움터 2.0",
+					   publisher:"생능출판사",
+					   author:"최윤철, 임순범",
+					   price=25000
+					   }*/
+book.pages =442; /* {title:"멀티미디어 배움터 2.0",
+					   publisher:"생능출판사",
+					   author:"최윤철, 임순범",
+					   price=25000,
+					   pages=442
+					   }  */
+book.display_book=function (){
+				   document.write("title:"+book.title+"<br>");
+				   document.write("publisher:"+book.publisher+"<br>");
+				   document.write("author:"+book.author+"<br>");
+				   document.write("price:"+book.price+"<br>");
+				   document.write("pages:"+book.pages+"<br>");   
+					   }
+console.log(book);
+/* 객체의 속성 접근은 "변수명.속성명"으로 접근  */
+console.log(book.title);		
+
+/* 반복자(p)를 이용한 향상된 for문 in은 book내에 p값이 존재하면 true, 아니면 false를 리턴 */
+for(var p in book){
+	document.write(p+":&nbsp");/* 속성명 */
+	document.write(book[p]+"<br>");/* 속성값  */
+}
+document.write("<hr><hr>");
+document.write("book.display_book()실행결과:<br>");
+book.display_book();
+
+
+</script>
+
+</body>
+</html>

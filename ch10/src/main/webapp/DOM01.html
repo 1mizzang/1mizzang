@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form>
+  추천도서:<input id="recommend" type="text" size="50"><br>
+  아이디:<input id="username" type="text" value="Name of User">
+</form>
+<br>
+<button onclick="replaceID()">클릭</button>
+<script>
+  /* id가 "recommend" 인 요소정보을 얻음 */
+  dom = document.getElementById('recommend');
+  dom.value="컴퓨터와 IT기술의 이해";  
+</script>
+<script>
+function replaceID(){
+	var dom = document.getElementById('username');/* id속성이 'username'인 요소의 정보 얻기 */
+	alert(dom.value);/* 변수명 dom이 얻은 요소의 value속성의 값 출력 */
+	var newValue = prompt("Type new value ");
+	dom.value=newValue;/* 변수명 dom의 value속성의 값을 newValue의 값으로 변경 */
+}
+</script>
+</body>
+</html>

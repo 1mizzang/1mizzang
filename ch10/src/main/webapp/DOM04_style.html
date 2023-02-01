@@ -1,0 +1,32 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+ document.write("<p>"+Math.random()*10+"</p>");/* 0부터 10보다작은 실수 랜덤 출력 */
+ document.write("<p>"+Math.round(Math.random()*10)+"</p>");/* 랜덤실수값을 반올림하여 0~10까지의 정수 출력 */
+</script>
+<p id="text" style="font-size:12px;">마우스 커서를 올리면 글자 크기가 커집니다. 클릭하면 색상이 바뀝니다</p>
+
+<script>
+function largefont(){
+	document.getElementById("text").style.fontSize="24px";
+}
+function normalfont(){
+	document.getElementById("text").style.fontSize="12px";
+}
+function changeColor(){
+	r = Math.round(Math.random()*255);//0~255
+	g = Math.round(Math.random()*255);//0~255
+	b = Math.round(Math.random()*255);//0~255
+	alert("rgb("+ r+","+g+","+b+")");
+	document.getElementById("text").style.color="rgb("+ r+","+g+","+b+")";
+}
+/* 리스너 : 어떤 이벤트 발생시 처리해주는 속성(객체) */
+document.getElementById("text").onmouseover=largefont;/* 마우스를 요소에 올리는 이벤트 onmouseover */
+document.getElementById("text").onmouseout=normalfont;/* 마우스를 요소에서 벗어나는 이벤트 onmouseout */
+document.getElementById("text").onclick=changeColor;/* 마우스로 클릭시 이벤트 처리 onclick */
+</script>
+
+</body>
+</html>
